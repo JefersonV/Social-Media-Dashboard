@@ -7,6 +7,8 @@
   --instagram2: hsl(329, 70%, 58%);
   --youTube: hsl(348, 97%, 39%);
   --gray: #9b9ea7;
+  --gray-background: #f0f3fa;
+  --gray-titles: #6d6d6d;
 }
 
 body {
@@ -131,4 +133,54 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 10px;
+}
+
+/* section overview */
+
+.overview {
+  margin-top: 35px;
+  /* padding-bottom: 900px; */
+}
+
+.overview h2 {
+  font-family: "inter", sans-serif;
+  font-weight: bold;
+  font-size: 1.65em;
+  color: var(--gray-titles);
+}
+
+.card__small {
+  border-radius: 5px;
+}
+
+.card-small__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  background: var(--gray-background);
+}
+
+.card-small__views {
+  font-size: 0.9em;
+  font-family: "inter", sans-serif;
+  font-weight: bold;
+  color: var(--gray-titles);
+}
+
+.card-small__number {
+  font-size: 1.55em;
+  font-family: "inter", sans-serif;
+  font-weight: bold;
+}
+
+.card-small__percentage {
+  display: flex;
+  align-items: center;
+}
+
+.card-small__percentage span {
+  color: var(--lime-green);
+  font-size: 0.85em;
+  font-weight: 700;
 }
