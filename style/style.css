@@ -151,6 +151,7 @@ body {
 
 .card__small {
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .card-small__content {
@@ -183,4 +184,30 @@ body {
   color: var(--lime-green);
   font-size: 0.85em;
   font-weight: 700;
+}
+
+@media screen and (min-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5em;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1.5em;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .wrapper {
+    max-width: 1000px;
+    display: block;
+    margin: 0 auto;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 1.5em;
+  }
 }
