@@ -1,10 +1,11 @@
 :root {
-	--lime-green: hsl(163, 72%, 41%)
-	--bright-red: hsl(356, 69%, 56%)
-	--facebook: hsl(208, 92%, 53%)
-	--twitter: hsl(203, 89%, 53%)
-	--instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%)
-	--youTube: hsl(348, 97%, 39%)
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+  --youTube: hsl(348, 97%, 39%);
+  --gray: #9b9ea7;
 }
 
 body {
@@ -47,21 +48,29 @@ body {
   content: "";
   height: 3px;
   display: block;
-  background-color: var(--facebook);
+  background: var(--facebook);
 }
 
 .card__image {
+  margin-top: 25px;
   color: #6d6d6d;
-	font-weight: 500;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  font-weight: 500;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__image img {
+  padding-right: 10px;
 }
 
 .card__description-followers {
   display: block;
   text-transform: uppercase;
-  color: #6d6d6d;
+  color: var(--gray);
+  letter-spacing: 3px;
+  font-size: 0.9em;
 }
 
 .card__description-date {
@@ -71,4 +80,11 @@ body {
 }
 
 .card__description-follows {
+  color: var(--lime-green);
+  font-size: 0.8em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
 }
