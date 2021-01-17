@@ -9,6 +9,7 @@
   --gray: #9b9ea7;
   --gray-background: #f0f3fa;
   --gray-titles: #6d6d6d;
+  --color-check: #37ce8f;
 }
 
 body {
@@ -23,7 +24,7 @@ body {
 }
 
 .top-card {
-  margin-top: -50px;
+  margin-top: -40px;
 }
 
 .wrapper {
@@ -54,6 +55,48 @@ body {
   margin: 5px 0;
   border-bottom: 1px solid var(--gray);
   padding-bottom: 20px;
+}
+
+.header-dark {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-dark__title {
+  display: inline;
+}
+
+.header__switch {
+  height: 40px;
+  display: block;
+  border-radius: 20px;
+  background-color: var(--gray);
+  width: 80px;
+  padding: 5px;
+  box-sizing: border-box;
+  color: white;
+}
+
+.header__switch::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  transform: translateX(40px);
+  transition: 0.5s;
+  will-change: transform;
+}
+
+.header__checkbox {
+  display: none;
+}
+
+.header__checkbox:checked ~ .header__switch::before {
+  transform: translate(0);
 }
 
 .card {
@@ -137,8 +180,7 @@ body {
 /* section overview */
 
 .overview {
-  margin-top: 35px;
-  /* padding-bottom: 900px; */
+  padding: 35px 0 50px 0;
 }
 
 .overview h2 {
@@ -218,22 +260,34 @@ body {
     color: #eee;
     background: #252b43;
   }
-  .overview .wrapper h2 .grid .card-small {
+
+  .header {
     color: #eee;
-    background: #252b43;
+    background: #20222f;
+  }
+
+  .header__switch {
+    color: #262b3e;
+    background: var(--color-check);
+  }
+  .wrapper h2 {
+    color: white;
+  }
+
+  .top-card {
+    background: #20222f;
   }
   .card {
     color: #eee;
     background: #252b43;
-    border: 1px solid white;
   }
 
   .card__image {
     color: #ccc;
   }
 
-  .card-small {
-    border: 1px solid white;
+  .overview {
+    background-color: #20222f;
   }
 
   .card-small__content {
@@ -243,13 +297,5 @@ body {
 
   .card-small__views {
     color: var(--gray);
-  }
-
-  .header {
-    color: #eee;
-    background: #20222f;
-  }
-  .wrapper h2 {
-    color: white;
   }
 }
